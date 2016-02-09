@@ -13,8 +13,8 @@ public:
 	Figure();
 	virtual ~Figure();
 
-	double getArea() const = 0;
-	double getPerimeter() const = 0;
+	virtual double getArea() const = 0;
+	virtual double getPerimeter() const = 0;
 };
 
 #endif /* FIGURE_H_ */

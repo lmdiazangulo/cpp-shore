@@ -16,3 +16,8 @@ Rectangle::~Rectangle() {
 	// TODO Auto-generated destructor stub
 }
 
+double Rectangle::getArea() const {
+}
+
+double Rectangle::getPerimeter() const {
+}

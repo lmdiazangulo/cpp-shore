@@ -15,6 +15,8 @@ public:
 	Rectangle(const double width, const double height);
 	virtual ~Rectangle();
 
+	double getArea() const;
+	double getPerimeter() const;
 private:
 	double width_;
 	double height_;
