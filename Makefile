@@ -21,7 +21,7 @@ ifeq ($(target),release)
 endif
 
 # =============================================================================
-SRCS_CXX = main.cpp
+SRCS_CXX = main.cpp Circle.cpp Figure.cpp
 
 OBJS_CXX := $(addprefix $(OBJ_DIR), $(SRCS_CXX:.cpp=.o))
 

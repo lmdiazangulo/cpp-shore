@@ -2,7 +2,10 @@
 #include <iostream>
 #include <math.h>
 
-#include "Rectangle.h"
+//#include "Rectangle.h"
+#include "Circle.h"
+
+//#include "Rectangle.cpp"
 
 using namespace std;
 
@@ -15,13 +18,16 @@ void printBieeeenOrOhh(const bool result) {
 }
 
 int main() {
-	const Rectangle rect(4.0, 2.0);
-	printBieeeenOrOhh(rect.getArea() == 8.0);
+//	const Rectangle rect(4.0, 2.0);
+//	printBieeeenOrOhh(rect.getArea() == 8.0);
 
 //	const Triangle tri(4.0, 2.0);
 //	printBieeeenOrOhh(tri.getArea() == 4.0);
 //
-//	const Circle circ(5.0);
-//	printBieeeenOrOhh(circ.getArea() == M_PI * pow(5.0,2));
+
+	const Circle circ(5.0);
+	printBieeeenOrOhh(circ.getArea() == M_PI * pow(5.0,2));
+
+	return 0;
 
 }

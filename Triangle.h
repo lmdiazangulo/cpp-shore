@@ -15,6 +15,9 @@ public:
 	Triangle(const double width, const double height);
 	virtual ~Triangle();
 
+	        double getArea() const;
+			double getPerimeter() const;
+
 private:
 	double width_;
 	double height_;

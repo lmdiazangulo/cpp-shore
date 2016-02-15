@@ -7,12 +7,18 @@
 
 #include "Circle.h"
 
-Circle::Circle() {
-	// TODO Auto-generated constructor stub
-
+Circle::Circle(const double ratio){
+	ratio_=ratio;
 }
 
 Circle::~Circle() {
 	// TODO Auto-generated destructor stub
 }
 
+double Circle::getArea() const {
+return 	M_PI*pow(ratio_,2);
+}
+
+double Circle::getPerimeter() const {
+return	2*M_PI*ratio_;
+}
