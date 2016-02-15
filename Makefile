@@ -31,11 +31,7 @@ ifeq ($(target),release)
 endif
 
 # =============================================================================
-<<<<<<< HEAD
-SRCS_CXX = main.cpp Circle.cpp Figure.cpp Rectangle.cpp Octagon.cpp
-=======
 SRCS_CXX := $(shell find $(SRC_DIR) -maxdepth 1 -type f -name "*.cpp")
->>>>>>> 9ad50c5eab54e8c21702f471496930f09ee4f9ef
 
 OBJS_CXX := $(addprefix $(OBJ_DIR), $(SRCS_CXX:.cpp=.o))
 
