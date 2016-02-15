@@ -8,7 +8,10 @@
 #ifndef OCTAGON_H_
 #define OCTAGON_H_
 
+#include <math.h>
+
 #include "Figure.h"
+
 
 class Octagon: public Figure {
 public:
