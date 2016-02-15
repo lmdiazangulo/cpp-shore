@@ -43,7 +43,7 @@ int main() {
 	figureList.push_back(new Rectangle(5.0, 3.0));
 	figureList.push_back(new Circle(2.0));
 	figureList.push_back(new Octagon(3.0));
-//	figureList.push_back(new Triangle(5.0,2.0));
+	figureList.push_back(new Triangle(5.0,2.0));
 
 	cout << computeArea(figureList) << endl;
 
