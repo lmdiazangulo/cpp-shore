@@ -44,7 +44,7 @@ clean:
 	rm -rf *.o *.d $(OBJ_DIR)
 
 clobber: clean
-	rm -rf $(LIB_DIR)
+	rm -rf $(LIB_DIR) $(BIN_DIR)
 
 create_dirs:
 	@echo 'Creating directories to store binaries and intermediate objects'

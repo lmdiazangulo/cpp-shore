@@ -22,7 +22,7 @@ int main() {
 //	const Triangle tri(4.0, 2.0);
 //	printBieeeenOrOhh(tri.getArea() == 4.0);
 
-//	const Octagon octo()
+	const Octagon octo()
 
 	const Circle circ(5.0);
 	printBieeeenOrOhh(circ.getArea() == M_PI * pow(5.0,2));
