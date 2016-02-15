@@ -16,3 +16,8 @@ Triangle::~Triangle() {
 	// TODO Auto-generated destructor stub
 }
 
+double Triangle::getArea() const {
+}
+
+double Triangle::getPerimeter() const {
+}

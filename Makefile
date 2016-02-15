@@ -2,6 +2,12 @@
 target   = debug
 compiler = gnu
 out = figures
+# =============================================================================
+SRC_DIR = ./src/
+OBJ_DIR = ./obj/
+BUILD_DIR = ./build/
+
+BIN_DIR = $(BUILD_DIR)bin/
 
 # =============================================================================
 ifeq ($(compiler),gnu)
@@ -21,7 +27,7 @@ ifeq ($(target),release)
 endif
 
 # =============================================================================
-SRCS_CXX = main.cpp
+SRCS_CXX := $(shell find $(SRC_DIR) -maxdepth 1 -type f -name "*.cpp")
 
 OBJS_CXX := $(addprefix $(OBJ_DIR), $(SRCS_CXX:.cpp=.o))
 
@@ -29,25 +35,30 @@ OBJS_CXX := $(addprefix $(OBJ_DIR), $(SRCS_CXX:.cpp=.o))
 
 all: default
 
-default: print $(out) 
+default: print create_dirs $(out) 
 	@echo "======================================================="
 	@echo "           $(out) compilation finished             "
 	@echo "======================================================="
 		
 clean:
-	rm -rf *.err *.o *.d $(OBJ_DIR)
+	rm -rf *.o *.d $(OBJ_DIR)
 
 clobber: clean
-	rm -rf $(LIB_DIR)
+	rm -rf $(LIB_DIR) $(BIN_DIR)
 
-%.o: %.cpp
+create_dirs:
+	@echo 'Creating directories to store binaries and intermediate objects'
+	-mkdir -p $(OBJ_DIR)
+
+$(OBJ_DIR)%.o: %.cpp
 	@dirname $@ | xargs mkdir -p
 	@echo "Compiling:" $@
 	$(CXX) $(CXXFLAGS) $(addprefix -D, $(DEFINES)) $(addprefix -I,$(INCLUDES)) -c -o $@ $<
 		
 $(out): $(OBJS_CXX)
 	@echo "Linking:" $@
-	${CXX} $^ -o $(out) $(CXXFLAGS) \
+	@mkdir -p $(BIN_DIR)
+	${CXX} $^ -o $(BIN_DIR)$(out) $(CXXFLAGS) \
 	 $(addprefix -D, $(DEFINES)) \
 	 $(addprefix -I, $(SOURCE_DIR)) $(addprefix -I, ${INCLUDES}) \
 	 $(addprefix -L, ${LIBRARIES}) $(addprefix -l, ${LIBS})

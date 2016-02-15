@@ -8,12 +8,18 @@
 #ifndef CIRCLE_H_
 #define CIRCLE_H_
 
-#include "figure.h"
+#include <math.h>
 
-class Circle: public figure {
+#include "Figure.h"
+
+
+class Circle: public Figure {
 public:
 	Circle(const double ratio);
 	virtual ~Circle();
+
+	double getArea() const;
+	double getPerimeter() const;
 
 private:
 	double ratio_;
