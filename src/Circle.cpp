@@ -7,8 +7,8 @@
 
 #include "Circle.h"
 
-Circle::Circle(const double radius){
-	radius_=radius;
+Circle::Circle(const double ratio){
+	ratio_=ratio;
 }
 
 Circle::~Circle() {
@@ -16,9 +16,9 @@ Circle::~Circle() {
 }
 
 double Circle::getArea() const {
-return 	M_PI*pow(radius_,2);
+	return 	M_PI*pow(ratio_,2);
 }
 
 double Circle::getPerimeter() const {
-return	2*M_PI*radius_;
+	return	2*M_PI*ratio_;
 }
