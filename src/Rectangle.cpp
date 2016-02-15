@@ -17,7 +17,9 @@ Rectangle::~Rectangle() {
 }
 
 double Rectangle::getArea() const {
+	return width_*height_;
 }
 
 double Rectangle::getPerimeter() const {
+	return 2*width_+2* height_;
 }

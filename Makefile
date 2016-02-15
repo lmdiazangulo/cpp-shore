@@ -4,6 +4,10 @@ compiler = gnu
 out = figures
 
 # =============================================================================
+SRC_DIR = ./src/
+OBJ_DIR = ./obj/
+BUILD_DIR = ./build/
+
 ifeq ($(compiler),gnu)
 	CC = gcc 
 	CXX = g++
@@ -21,7 +25,7 @@ ifeq ($(target),release)
 endif
 
 # =============================================================================
-SRCS_CXX = main.cpp Circle.cpp Figure.cpp
+SRCS_CXX = main.cpp Circle.cpp Figure.cpp Rectangle.cpp
 
 OBJS_CXX := $(addprefix $(OBJ_DIR), $(SRCS_CXX:.cpp=.o))
 

@@ -15,14 +15,14 @@
 
 class Circle: public Figure {
 public:
-	Circle(const double ratio);
+	Circle(const double radius);
 	virtual ~Circle();
 
 	double getArea() const;
 	double getPerimeter() const;
 
 private:
-	double ratio_;
+	double radius_;
 };
 
 #endif /* CIRCLE_H_ */
