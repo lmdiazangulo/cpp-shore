@@ -9,7 +9,7 @@
 
 
 Octagon::Octagon(const double edge) {
-	edge_=edge;
+	edge_ = edge;
 }
 
 Octagon::~Octagon() {
@@ -17,9 +17,9 @@ Octagon::~Octagon() {
 }
 
 double Octagon::getArea() const {
-	return 2*(1+sqrt(2))*edge*edge;
+	return 2.0 * (1.0 + sqrt(2.0)) * edge_*edge_;
 }
 
 double Octagon::getPerimeter() const {
-	return 8*edge;
+	return 8.0 * edge_;
 }
