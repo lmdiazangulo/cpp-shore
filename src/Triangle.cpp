@@ -17,7 +17,7 @@ Triangle::~Triangle() {
 }
 
 double Triangle::getArea() const {
-	return width_*height_/2.0;
+	return width_*height_/2.00;
 }
 
 double Triangle::getPerimeter() const {
