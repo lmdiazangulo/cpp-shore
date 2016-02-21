@@ -7,6 +7,7 @@
 #include "Octagon.h"
 #include "Rectangle.h"
 #include "Triangle.h"
+#include "Pentagon.h"
 
 
 using namespace std;
@@ -37,6 +38,10 @@ int main() {
 	const Circle circ(5.0);
 	printBieeeenOrOhh(circ.getArea() == M_PI * pow(5.0,2));
 
+	const Pentagon pent(1.0);
+	printBieeeenOrOhh(pent.getPerimeter()==5.0);
+
+
 	vector<const Figure*> figureList;
 
 	figureList.push_back(new Rectangle(4.0, 2.0));
@@ -44,6 +49,7 @@ int main() {
 	figureList.push_back(new Circle(2.0));
 	figureList.push_back(new Octagon(3.0));
 	figureList.push_back(new Triangle(5.0,2.0));
+	figureList.push_back(new Pentagon(1.0));
 
 	cout << computeArea(figureList) << endl;
 
