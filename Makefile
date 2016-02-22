@@ -31,7 +31,7 @@ ifeq ($(target),release)
 endif
 
 # =============================================================================
-SRCS_CXX := $(shell find $(SRC_DIR) -maxdepth 1 -type f -name "*.cpp")
+SRCS_CXX := $(shell find $(SRC_DIR)apps/figures/ -maxdepth 1 -type f -name "*.cpp")
 
 OBJS_CXX := $(addprefix $(OBJ_DIR), $(SRCS_CXX:.cpp=.o))
 
@@ -53,6 +53,9 @@ clobber: clean
 create_dirs:
 	@echo 'Creating directories to store binaries and intermediate objects'
 	-mkdir -p $(OBJ_DIR)
+	
+testMath:
+	$(MAKE) -f ./src/apps/test/test.mk
 
 $(OBJ_DIR)%.o: %.cpp
 	@dirname $@ | xargs mkdir -p
@@ -76,3 +79,5 @@ print:
 	@echo "C++ Flags:        " $(CXXFLAGS)
 	@echo "Defines:          " $(DEFINES)
 	@echo "======================================================="
+	
+export
