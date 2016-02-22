@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include "myFunc.h"
-
+#include "MyArray.h"
 using namespace std;
 
 int main (){
@@ -19,5 +19,8 @@ int main (){
     
     Numero numero;
     op_sumT(numero,numero);
+//Uso de MyArray:
+    MyArray<double, 3> myArrayPeta;
+
 
 }
