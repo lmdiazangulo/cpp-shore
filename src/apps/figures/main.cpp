@@ -9,7 +9,6 @@
 #include "Triangle.h"
 #include "Pentagon.h"
 
-
 using namespace std;
 
 void printBieeeenOrOhh(const bool result) {
@@ -36,11 +35,10 @@ int main() {
 	printBieeeenOrOhh(tri.getArea() == 4.0);
 
 	const Circle circ(5.0);
-	printBieeeenOrOhh(circ.getArea() == M_PI * pow(5.0,2));
+	printBieeeenOrOhh(fabs(circ.getArea() - M_PI * pow(5.0,2) < 1e-10));
 
 	const Pentagon pent(1.0);
 	printBieeeenOrOhh(pent.getPerimeter()==5.0);
-
 
 	vector<const Figure*> figureList;
 

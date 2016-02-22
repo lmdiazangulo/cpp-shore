@@ -31,7 +31,7 @@ ifeq ($(target),release)
 endif
 
 # =============================================================================
-SRCS_CXX := $(shell find $(SRC_DIR) -maxdepth 1 -type f -name "*.cpp")
+SRCS_CXX := $(shell find $(SRC_DIR)apps/figures/ -maxdepth 1 -type f -name "*.cpp")
 
 OBJS_CXX := $(addprefix $(OBJ_DIR), $(SRCS_CXX:.cpp=.o))
 
