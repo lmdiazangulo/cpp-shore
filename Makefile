@@ -53,6 +53,9 @@ clobber: clean
 create_dirs:
 	@echo 'Creating directories to store binaries and intermediate objects'
 	-mkdir -p $(OBJ_DIR)
+	
+testMath:
+	$(MAKE) -f ./src/apps/test/test.mk
 
 $(OBJ_DIR)%.o: %.cpp
 	@dirname $@ | xargs mkdir -p
@@ -76,3 +79,5 @@ print:
 	@echo "C++ Flags:        " $(CXXFLAGS)
 	@echo "Defines:          " $(DEFINES)
 	@echo "======================================================="
+	
+export
