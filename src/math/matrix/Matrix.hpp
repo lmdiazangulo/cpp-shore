@@ -106,8 +106,7 @@ void Matrix<T>::factorizeLU_(std::size_t pivot[]) {
             printInfo();
             std::stringstream ss;
             ss << "Zero pivot on step " << k;
-//            throw std::out_of_range(ss.str());
-            throw Error::Size("Out of range");
+            throw std::out_of_range(ss.str());
         }
         //  Interchange rows L and K if necessary.
         if (l != k) {

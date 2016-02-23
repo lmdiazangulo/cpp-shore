@@ -34,6 +34,7 @@
 #   define MATRICES_ROW_MAJOR      1
 #endif
 
+#include <stdexcept>
 #include <vector>
 
 #include "math/Types.h"
